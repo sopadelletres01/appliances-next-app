@@ -14,6 +14,7 @@ export default function Article({ article }) {
         height={350}
         quality={100}
         placeholder="blur"
+        /*La propiedad blurDataURL solo funciona con las páginas estáticas*/
         blurDataURL="data:image/jpeg;base64,/9j/2wBDAAoHBwgHBgoICAgLCgoLDhgQDg0NDh0VFhEYIx8lJCIfIiEmKzcvJik0KSEiMEExNDk7Pj4+JS5ESUM8SDc9Pjv/2wBDAQoLCw4NDhwQEBw7KCIoOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozv/wAARCAAFAAgDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAb/xAAbEAACAwADAAAAAAAAAAAAAAABAgADBQZRkf/EABUBAQEAAAAAAAAAAAAAAAAAAAME/8QAFhEBAQEAAAAAAAAAAAAAAAAAAQAS/9oADAMBAAIRAxEAPwCcz+TpSgWzLosToOQfYiIqtJkv/9k="
       ></Image>
       <p>{article && article.description}</p>
@@ -22,6 +23,7 @@ export default function Article({ article }) {
   );
 }
 
+/*Get static props is useful when you have a page that doesn't change, it means the data is static or less likely to change(eg:list of countries) */
 export async function getStaticProps() {
   const data = await fetch(
     "https://631db9f8789612cd07af479d.mockapi.io/article/1"

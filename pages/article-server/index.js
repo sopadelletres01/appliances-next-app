@@ -11,7 +11,7 @@ export default function Article({ article }) {
     </div>
   );
 }
-
+/*Get server side props is useful when you have a page that needs the data updated or is more likely to change (the price of the light) */
 export async function getServerSideProps() {
   const data = await fetch(
     "https://631db9f8789612cd07af479d.mockapi.io/article/1"

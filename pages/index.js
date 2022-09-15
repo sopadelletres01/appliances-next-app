@@ -9,7 +9,7 @@ export default function Home() {
     <PageLayout title={"Home"}>
       <div className={styles.container}>
         <h1>HOLA</h1>
-        <Link href="/article-client/article">Article Client Side Rendering</Link>
+        <Link href="/article-client">Article Client Side Rendering</Link>
         <hr></hr>
         <Link href="/article-server">Article Server Side Rendering</Link>
         <hr></hr>
